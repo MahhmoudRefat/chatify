@@ -47,7 +47,6 @@ class LoginPage extends StatelessWidget {
           ),
           CustomTextField(hintText: "Email",),
 
-          CustomTextField(hintText: "password",),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
