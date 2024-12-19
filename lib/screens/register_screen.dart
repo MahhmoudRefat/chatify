@@ -1,26 +1,25 @@
 import 'package:chatify/constants.dart';
-import 'package:chatify/screens/register_screen.dart';
 import 'package:chatify/widgets/custom_button.dart';
 import 'package:chatify/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
-
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
-  static String id = "LoginPage";
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
+  static String id = "RegisterPage";
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       backgroundColor: KPrimaryColor,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView(
+
+
           children: [
-            SizedBox(
-              height: 75,
+            const SizedBox(
+              height: 20,
             ),
-            Image.asset(
+                   Image.asset(
               "assets/images/chatify.png",
               height: 100,
             ),
@@ -44,7 +43,7 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  'LOGIN',
+                  'REGISTER',
                   style: TextStyle(
                     fontSize: 24,
                     color: Colors.white,
@@ -61,18 +60,36 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+
             CustomTextField(
               hintText: "Password",
             ),
             const SizedBox(
               height: 20,
             ),
-            CustomButton(
-              button_name: "LOGIN",
+            CustomTextField(
+              hintText: "Email",
             ),
             const SizedBox(
               height: 20,
             ),
+            CustomTextField(
+              hintText: "Email",
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            CustomTextField(
+              hintText: "Email",
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            CustomButton(button_name: "Register"),
+            const SizedBox(
+              height: 20,
+            ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -83,11 +100,11 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, "RegisterPage");
+                  onTap: (){
+                    Navigator.pop(context);
                   },
                   child: Text(
-                    '  Register',
+                    '  Log in ',
                     style: TextStyle(
                       color: Color(0xffC7EDE6),
                     ),
@@ -95,9 +112,10 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 75,
+            const SizedBox(
+              height: 20,
             ),
+
           ],
         ),
       ),
